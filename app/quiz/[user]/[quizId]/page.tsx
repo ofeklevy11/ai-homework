@@ -122,10 +122,6 @@ export default function QuizPage({ params }: { params: Promise<{ user: string; q
     return 'כדאי לחזור על החומר ולנסות שוב';
   };
 
-  const whatsappMessage = encodeURIComponent(
-    `שלום! אני ${displayName}, סיימתי את ${quiz.title}.\nציון: ${correctCount}/${totalQuestions} (${scorePercent}%)\nמצרף/ה את שיעורי הבית שלי:`
-  );
-
   if (quizFinished) {
     return (
       <div className="quiz-container">
@@ -149,18 +145,9 @@ export default function QuizPage({ params }: { params: Promise<{ user: string; q
               </div>
             ))}
             <div style={{ textAlign: 'center', marginTop: '25px' }}>
-              <p style={{ color: '#a78bfa', marginBottom: '15px', fontWeight: 600 }}>
-                בסיום המשימות, שלחו קישור לשיחה / צילום מסך בוואטסאפ
+              <p style={{ color: '#a78bfa', fontWeight: 600 }}>
+                בסיום המשימות, שלחו קישור לשיחה / צילום מסך למורה
               </p>
-              <a
-                href={`https://wa.me/?text=${whatsappMessage}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="whatsapp-btn"
-              >
-                <span className="whatsapp-icon">💬</span>
-                שליחת שיעורי בית בוואטסאפ
-              </a>
             </div>
           </div>
         )}
