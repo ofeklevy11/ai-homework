@@ -23,6 +23,9 @@ export default function Home() {
           <h2>אופק</h2>
         </Link>
       </div>
+      <Link href="/leaderboard" className="back-btn" style={{ marginTop: '10px', fontSize: '1.1rem' }}>
+        לוח תוצאות
+      </Link>
     </div>
   );
 }
