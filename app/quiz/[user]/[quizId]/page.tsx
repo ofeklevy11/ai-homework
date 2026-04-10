@@ -70,11 +70,6 @@ export default function QuizPage({ params }: { params: Promise<{ user: string; q
   const handleNext = async () => {
     if (currentQuestion + 1 >= totalQuestions) {
       setQuizFinished(true);
-      // Submit to DB
-      const finalCorrect = correctCount + (selectedAnswer === question.correctIndex ? 0 : 0);
-      // correctCount is already updated by this point
-      const finalScore = answersLog.filter((a) => a.isCorrect).length +
-        (selectedAnswer === question.correctIndex && answersLog.length < totalQuestions ? 1 : 0);
       const score = answersLog.filter(a => a.isCorrect).length;
       const percentage = Math.round((score / totalQuestions) * 100);
 
