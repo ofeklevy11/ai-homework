@@ -7,6 +7,7 @@ import { quizData } from '@/lib/quiz-data';
 const userNames: Record<string, string> = {
   mika: 'מיקה',
   rom: 'רום',
+  ofek: 'אופק',
 };
 
 interface AnswerRecord {

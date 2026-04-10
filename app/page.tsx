@@ -18,6 +18,10 @@ export default function Home() {
           <div className="user-avatar">👨‍💻</div>
           <h2>רום</h2>
         </Link>
+        <Link href="/user/ofek" className="user-card">
+          <div className="user-avatar">🧑‍💻</div>
+          <h2>אופק</h2>
+        </Link>
       </div>
     </div>
   );

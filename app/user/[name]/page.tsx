@@ -6,6 +6,7 @@ import { use } from 'react';
 const userNames: Record<string, string> = {
   mika: 'מיקה',
   rom: 'רום',
+  ofek: 'אופק',
 };
 
 export default function UserPage({ params }: { params: Promise<{ name: string }> }) {
